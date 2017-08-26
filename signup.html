@@ -1,0 +1,56 @@
+<html>
+<head><title>signup</title>
+<script>
+function phonenumber(inputtxt,input2)  
+    {  
+      var phoneno = /^\d{10}$/;  
+      if(inputtxt.value.match(phoneno))  
+      {  
+          return true;  
+      }  
+      else  
+      { 
+alert("Invalid number"); 
+return false;
+
+      } 
+if(input2.value.match(phoneno))  
+      { 
+          return true;  
+      }  
+      else  
+      { 
+alert("password must contain ten letter");
+return false;
+          
+      } 
+ 
+      }
+</script> 
+</head>
+<body bgcolor="skyblue" onload='document.detail.name.focus()'><center>
+<h1>Signup section</h1>
+<h2><form action="insert.php" name="detail" method=POST>
+<table border="0" cellpadding="20"  autocomplete="on">
+<tr>
+<td>Name</td><td>:</td> <td><input type="text" name="name" placeholder="Enter the Name" size="25" style="height: 30px;" required></td></tr><tr>
+<td>Email id</td><td>:</td><td> <input type="email" name="email" placeholder="Enter the Email id"  size="25"  style="height: 30px;" autocomplete="off"required></td></tr>
+<tr>
+<td>Mobile No</td><td>:</td> <td><input type="text" name="mobile" placeholder="Enter the Mobile no" size="25" style="height: 30px;" required></td></tr>
+<tr>
+<td>Password</td><td>:</td> <td><input type="text" name="pass" placeholder="Password contain 10 character" size="25" style="height: 30px;" required></td></tr>
+<tr>
+<td>Latitude</td><td>:</td> <td><input type="text" name="latitude" placeholder="enter the latitude" size="25" style="height: 30px;" required></td><td text-size:"2"><a href="latitude.php">Current<br>Latitude?</a></td></tr>
+<tr>
+<td>Longitude</td><td>:</td> <td><input type="text" name="longitude" placeholder="enter the longitude" size="25" style="height: 30px;" required></td</tr>
+<tr>
+<td>Type</td><td>:</td> <td><select name="type">
+  <option value="Learn">Learn</option>
+  <option value="Teach">Teach</option>
+</select> </td></tr>
+</h2>  
+</table>
+<input type="submit" value="Submit" name="submit" onclick="phonenumber(document.detail.mobile,document.detail.pass)"/>
+</form></center>
+</body>
+</html>
